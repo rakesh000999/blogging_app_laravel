@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::resource('posts', PostController::class);
+    Route::get('/', [PostController::class, 'index'])->name('posts.index');
 });
 
 require __DIR__ . '/auth.php';

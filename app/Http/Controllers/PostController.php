@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+// use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -12,6 +15,8 @@ class PostController extends Controller
     public function index()
     {
         //
+        $posts = Post::latest()->get();
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -20,6 +25,7 @@ class PostController extends Controller
     public function create()
     {
         //
+        return view('posts.create');
     }
 
     /**
@@ -28,6 +34,18 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $validated = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ]);
+
+        $validated['user_id'] = Auth::id();
+
+        // $validated['user_id'] = 1;
+
+        Post::create($validated);
+
+        return redirect()->route('posts.create')->with('success' , 'Post created successfully');
     }
 
     /**

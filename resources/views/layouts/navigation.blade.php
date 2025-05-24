@@ -13,15 +13,32 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('BrainGo') }}
                     </x-nav-link>
                 </div>
             </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
+
+                <a href="{{ route('posts.create') }}"
+                    class="inline-block bg-blue-600 text-black px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    + Create Post
+                </a>
+
+                <!-- <div class="pt-2 pb-3 space-y-1">
+                    <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-responsive-nav-link>
+                    <a href="{{ route('posts.create') }}"
+                        class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center mt-2">
+                        + Create Post
+                    </a>
+                </div> -->
+
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
+
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div>{{ Auth::user()->name }}</div>
 
@@ -31,6 +48,7 @@
                                 </svg>
                             </div>
                         </button>
+
                     </x-slot>
 
                     <x-slot name="content">
@@ -43,7 +61,7 @@
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
@@ -89,7 +107,7 @@
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                        onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
