@@ -1,5 +1,7 @@
 # Blogging System CRUD
-![Screenshot 2025-06-10 235732](https://github.com/user-attachments/assets/1e57ed15-cb28-485b-9cd5-935c4fd6d0f1)
-![Screenshot 2025-06-10 235806](https://github.com/user-attachments/assets/a71f8a62-a9ad-4067-82dc-4a445e2787e2)
-![Screenshot 2025-06-10 235830](https://github.com/user-attachments/assets/7f716d12-296b-4cf4-a1c9-74a7c1126f00)
-![Screenshot 2025-06-10 235850](https://github.com/user-attachments/assets/3dd9c028-cd79-4c8f-819d-fb182634447e)
+![Screenshot 2025-06-10 235732](https://github.com/user-attachments/assets/d7a897b7-597c-43f4-9f08-2e8db6d1a148)
+
+![Screenshot 2025-06-11 000414](https://github.com/user-attachments/assets/cc2fea8b-0e84-403f-a157-67752935b156)
+![Screenshot 2025-06-11 000430](https://github.com/user-attachments/assets/4bd799ec-eb0a-4627-ba86-b824ead3886f)
+![Screenshot 2025-06-11 000446](https://github.com/user-attachments/assets/a5d25046-6ee0-426d-890d-ffae2181ce19)
+![Screenshot 2025-06-11 000516](https://github.com/user-attachments/assets/2df189b3-3763-4e0d-aac7-c5662c606585)
